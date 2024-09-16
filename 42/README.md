@@ -25,7 +25,7 @@ curl -s https://raw.githubusercontent.com/WAROL52/script/master/42/printf/test.s
 curl -s https://raw.githubusercontent.com/WAROL52/script/master/42/so_long/test.sh | bash
 ```
 
-## get_next_line
+## push_swap
 ```sh
-curl -s https://raw.githubusercontent.com/WAROL52/script/master/42/get_next_line/test.sh | bash
+curl -s https://raw.githubusercontent.com/WAROL52/script/master/42/push_swap/test.sh | bash
 ```
