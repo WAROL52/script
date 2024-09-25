@@ -1,5 +1,34 @@
 #!/bin/bash
 
+
+#!/bin/bash
+
+# Demander le nom d'utilisateur
+read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
+
+# Vérifier si l'utilisateur existe
+if id "$username" &>/dev/null; then
+    # Vérifier si l'utilisateur a les droits sudo
+    if sudo -l -U "$username" &>/dev/null; then
+        echo "L'utilisateur '$username' a les droits sudo."
+    else
+        echo "L'utilisateur '$username' n'a pas les droits sudo."
+        echo "Voulez-vous lui accorder des droits sudo ? (o/n)"
+        read -r answer
+        if [[ "$answer" == "o" || "$answer" == "O" ]]; then
+            # Ajouter l'utilisateur au groupe sudo
+            echo "Ajout de '$username' au groupe sudo..."
+            sudo usermod -aG sudo "$username"
+            echo "L'utilisateur '$username' a maintenant des droits sudo."
+        else
+            echo "Aucune modification effectuée."
+        fi
+    fi
+else
+    echo "L'utilisateur '$username' n'existe pas."
+fi
+
+
 # Met à jour la liste des paquets
 sudo apt update
 
