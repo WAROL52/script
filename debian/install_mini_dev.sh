@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Demander le nom d'utilisateur
-read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
+printf "Entrez le nom d'utilisateur à vérifier pour les droits sudo :\n> "
+read username
 
 # Vérifier si l'utilisateur existe
 if id "$username" &>/dev/null; then
