@@ -3,10 +3,16 @@
 # Met à jour la liste des paquets
 sudo apt update
 
+# Vérifier et installer curl si nécessaire
+if ! command -v curl &> /dev/null
+then
+    echo "curl n'est pas installé. Installation de curl..."
+    sudo apt install -y curl
+fi
+
 # Liste des programmes à installer
 programs=(
     git
-    curl
     wget
     vim
     htop
