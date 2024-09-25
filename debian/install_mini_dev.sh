@@ -1,13 +1,6 @@
 #!/bin/bash
 
-
-#!/bin/bash
-
 # Demander le nom d'utilisateur
-read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
-read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
-read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
-read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
 read -p "Entrez le nom d'utilisateur à vérifier pour les droits sudo : " username
 
 # Vérifier si l'utilisateur existe
